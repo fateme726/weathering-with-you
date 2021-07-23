@@ -39,6 +39,7 @@ function displayTemprature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  celiciusTemprature = response.data.main.temp;
 }
 function search(city) {
   let apiKey = "b6d73f272b32c7eb8715d70996cfa1dc";
@@ -51,6 +52,29 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function showFahrenheitTemprature(event) {
+  event.preventDefault();
+  celiciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemprature = (celiciusTemprature * 9) / 5 + 32;
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(fahrenheitTemprature);
+}
+
+function showceliciusTemprature(event) {
+  celiciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  event.preventDefault();
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(celiciusTemprature);
+}
+let celiciusTemprature = null;
 search("tehran");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemprature);
+
+let celiciusLink = document.querySelector("#celicius-link");
+celiciusLink.addEventListener("click", showceliciusTemprature);

@@ -70,3 +70,12 @@ strong {
 form {
   margin-bottom: 20px;
 }
+
+.weather-temprature .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temprature .active:hover {
+  text-decoration: none;
+}
