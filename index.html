@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Weathering with you!</title>
   </head>
   <body>
     <div class="containor">
-      <h1>Weathering with you!</h1>
-      <h2>Berlin</h2>
-      <ul>
-        <li>Friday 5:00</li>
-        <li>clear</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <img
-            width="100px"
-            src="https://image.flaticon.com/icons/png/128/2570/2570483.png"
-            alt="cuteweather"
-          />
-          12° | °F
+      <div class="weatherapp">
+        <h1>Weathering with you!</h1>
+        <h2>Berlin</h2>
+        <ul>
+          <li>Friday 5:00</li>
+          <li>clear</li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <img
+              width="60px"
+              src="https://image.flaticon.com/icons/png/128/2570/2570483.png"
+              alt="cuteweather"
+            />
+            12° | °F
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Percipitation : 0%</li>
+              <li>Humidity : 0%</li>
+              <li>Wind : 2km/w</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-6">
-          <ul>
-            <li>Percipitation : 0%</li>
-            <li>Humidity : 0%</li>
-            <li>Wind : 2km/w</li>
-          </ul>
-        </div>
+        <small>
+          <a href="https://github.com/fateme726/weathering-with-you"
+            >Open-source</a
+          >
+          code by Fateme Yousefi
+        </small>
       </div>
-      <small>
-        <a href="https://github.com/fateme726/weathering-with-you"
-          >Open-source</a
-        >
-        code by Fateme Yousefi
-      </small>
     </div>
 
     <script src="src/app.js"></script>
