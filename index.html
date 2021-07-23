@@ -25,8 +25,27 @@
     <div class="containor">
       <div class="weatherapp-wrapper">
         <div class="weatherapp">
+          <h1>Weathering with you!</h1>
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="search any city you want"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
-            <h1>Weathering with you!</h1>
             <h2 id="city"></h2>
 
             <ul>
@@ -37,11 +56,7 @@
           <div class="row">
             <div class="col-6">
               <div class="clearfix weather-temprature">
-                <img
-                  width="40px"
-                  src="https://image.flaticon.com/icons/png/128/2570/2570483.png"
-                  alt="cuteweather"
-                />
+                <img width="40px" id="icon" src=" " alt="cuteweather" />
                 <strong id="temprature">12</strong>
                 <span class="unit"> ° | °F </span>
               </div>

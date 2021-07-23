@@ -17,7 +17,7 @@ h2 {
   color: #121212;
   display: block;
 
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 400px;
   line-height: 28px;
   text-align: left;
@@ -58,7 +58,7 @@ small {
   margin-right: px;
 }
 strong {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 600px;
 }
 .weather-temprature .unit {
@@ -66,4 +66,7 @@ strong {
   font-size: 16px;
   top: -5px;
   left: -5px;
+}
+form {
+  margin-bottom: 20px;
 }

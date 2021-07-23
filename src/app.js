@@ -34,8 +34,23 @@ function displayTemprature(response) {
   windElement.innerHTML = response.data.wind.speed;
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+}
+function search(city) {
+  let apiKey = "b6d73f272b32c7eb8715d70996cfa1dc";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric `;
+  axios.get(apiURL).then(displayTemprature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
 
-let apiKey = "b6d73f272b32c7eb8715d70996cfa1dc";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Berlin&appid=${apiKey}&units=metric `;
-axios.get(apiURL).then(displayTemprature);
+search("tehran");
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
