@@ -16,36 +16,45 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weathering with you!</title>
   </head>
   <body>
     <div class="containor">
-      <div class="weatherapp">
-        <h1>Weathering with you!</h1>
-        <h2>Berlin</h2>
-        <ul>
-          <li>Friday 5:00</li>
-          <li>clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              width="60px"
-              src="https://image.flaticon.com/icons/png/128/2570/2570483.png"
-              alt="cuteweather"
-            />
-            12° | °F
-          </div>
-          <div class="col-6">
+      <div class="weatherapp-wrapper">
+        <div class="weatherapp">
+          <div class="overview">
+            <h1>Weathering with you!</h1>
+            <h2 id="city"></h2>
+
             <ul>
-              <li>Percipitation : 0%</li>
-              <li>Humidity : 0%</li>
-              <li>Wind : 2km/w</li>
+              <li>Friday 5:00</li>
+              <li id="description">clear</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temprature">
+                <img
+                  width="40px"
+                  src="https://image.flaticon.com/icons/png/128/2570/2570483.png"
+                  alt="cuteweather"
+                />
+                <strong id="temprature">12</strong>
+                <span class="unit"> ° | °F </span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> Km/H</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <small>
+        <small class="link">
           <a href="https://github.com/fateme726/weathering-with-you"
             >Open-source</a
           >
